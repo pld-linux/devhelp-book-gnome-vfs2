@@ -1,6 +1,6 @@
 Summary:	DevHelp book: gnome-vfs
 Summary(pl):	Ksi±¿ka do DevHelp'a o gnome-vfs
-Name:		devhelp-book-gnome-vfs
+Name:		devhelp-book-gnome-vfs2
 Version:	2.0
 Release:	1
 License:	GPL
@@ -29,10 +29,10 @@ mv -f book.devhelp gnome-vfs-%{version}.devhelp
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_prefix}/books/gnome-vfs
+install -d $RPM_BUILD_ROOT%{_prefix}/books/gnome-vfs-2.0
 install -d $RPM_BUILD_ROOT%{_prefix}/specs
 install gnome-vfs-%{version}.devhelp $RPM_BUILD_ROOT%{_prefix}/specs
-install gnome-vfs-%{version}/* $RPM_BUILD_ROOT%{_prefix}/books/gnome-vfs
+install gnome-vfs-%{version}/* $RPM_BUILD_ROOT%{_prefix}/books/gnome-vfs-2.0
 
 %clean
 rm -rf $RPM_BUILD_ROOT
