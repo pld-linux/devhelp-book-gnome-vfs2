@@ -1,5 +1,5 @@
-Summary:	DevHelp book: gnome-vfs
-Summary(pl):	Ksi±¿ka do DevHelp'a o gnome-vfs
+Summary:	DevHelp book: gnome-vfs 2.0
+Summary(pl):	Ksi±¿ka do DevHelpa o gnome-vfs 2.0
 Name:		devhelp-book-gnome-vfs2
 Version:	2.0
 Release:	1
@@ -11,34 +11,28 @@ Requires:	devhelp
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6/share/devhelp/
+%define		_prefix		/usr/X11R6/share/devhelp
 
 %description
-DevHelp book about gnome-vfs 1.2
+DevHelp book about gnome-vfs 2.0.
 
 %description -l pl
-Ksi±¿ka do DevHelp o gnome-vfs 1.2
+Ksi±¿ka do DevHelpa o gnome-vfs 2.0.
 
 %prep
-%setup -q -c gnome-vfs-%{version} -n gnome-vfs-%{version}
-
-%build
-mv -f book gnome-vfs-%{version}
-mv -f book.devhelp gnome-vfs-%{version}.devhelp
+%setup -q -c -n gnome-vfs-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_prefix}/{books/gnome-vfs-2.0,specs}
 
-install -d $RPM_BUILD_ROOT%{_prefix}/books/gnome-vfs-2.0
-install -d $RPM_BUILD_ROOT%{_prefix}/specs
-install gnome-vfs-%{version}.devhelp $RPM_BUILD_ROOT%{_prefix}/specs
-install gnome-vfs-%{version}/* $RPM_BUILD_ROOT%{_prefix}/books/gnome-vfs-2.0
+install book.devhelp $RPM_BUILD_ROOT%{_prefix}/specs/gnome-vfs-%{version}.devhelp
+install book/* $RPM_BUILD_ROOT%{_prefix}/books/gnome-vfs-2.0
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files 
 %defattr(644,root,root,755)
-#%doc *.gz
-%{_prefix}/books
-%{_prefix}/specs
+%{_prefix}/books/*
+%{_prefix}/specs/*
