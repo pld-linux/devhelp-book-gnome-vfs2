@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications
 #Source0:	http://www.devhelp.net/books/books/gnome-vfs-2.0.tar.gz
 Source0:	gnome-vfs-2.0.tar.gz
+# Source0-md5:	936c87ba2f7084d042a2a4c01da79c7c
 URL:		http://www.devhelp.net/
 Requires:	devhelp
 BuildArch:	noarch
