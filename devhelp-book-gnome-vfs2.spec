@@ -5,7 +5,8 @@ Version:	2.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://www.devhelp.net/books/books/gnome-vfs-2.0.tar.gz
+#Source0:	http://www.devhelp.net/books/books/gnome-vfs-2.0.tar.gz
+Source0:	gnome-vfs-2.0.tar.gz
 URL:		http://www.devhelp.net/
 Requires:	devhelp
 BuildArch:	noarch
