@@ -34,7 +34,7 @@ install book/* $RPM_BUILD_ROOT%{_prefix}/books/gnome-vfs-2.0
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
+%files
 %defattr(644,root,root,755)
 %{_prefix}/books/*
 %{_prefix}/specs/*
